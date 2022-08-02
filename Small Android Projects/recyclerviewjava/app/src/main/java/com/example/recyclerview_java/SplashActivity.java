@@ -1,4 +1,4 @@
-package com.example.splashscreen;
+package com.example.recyclerview_java;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,13 +8,12 @@ import android.view.WindowManager;
 
 import java.util.Objects;
 
-public class MainActivity3 extends AppCompatActivity {
+public class SplashActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main3);
-
+        setContentView(R.layout.activity_splash);
         Objects.requireNonNull(getSupportActionBar()).hide();
         //for hiding status bar
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
@@ -24,7 +23,7 @@ public class MainActivity3 extends AppCompatActivity {
             public void run()
             {
                 try{
-                    sleep(3000);
+                    sleep(3500);
 
                 }catch (Exception e)
                 {
@@ -32,12 +31,13 @@ public class MainActivity3 extends AppCompatActivity {
                 }
                 finally {
                     //intent to move from this activity to another activity
-                    Intent i=new Intent(MainActivity3.this,MainActivity4.class);
+                    Intent i=new Intent(SplashActivity.this,MainActivity.class);
                     startActivity(i);
                     finish();
 
                 }
             }
         };t.start();
+
     }
 }
