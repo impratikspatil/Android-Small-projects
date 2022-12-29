@@ -89,13 +89,13 @@
 
             />
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_submit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:backgroundTint="#EFEAC637"
-            android:background="@drawable/default_option_border_bg"
+            android:background="@drawable/btnback"
             android:text="SUBMIT"
             android:textColor="@color/white"
             android:textSize="18sp"

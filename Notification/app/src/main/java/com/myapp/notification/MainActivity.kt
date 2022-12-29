@@ -55,11 +55,11 @@ class MainActivity : AppCompatActivity() {
         }
          imgBitmap= BitmapFactory.decodeResource(resources,R.drawable.quiz)
 
-        val pendingIntent1= PendingIntent.getActivity(this, 5, Intent(this,Questoin1::class.java), PendingIntent.FLAG_UPDATE_CURRENT)
-        val pendingIntent2= PendingIntent.getActivity(this, 5, Intent(this,Question2::class.java), PendingIntent.FLAG_UPDATE_CURRENT)
-        val pendingIntent3= PendingIntent.getActivity(this, 5, Intent(this,Question3::class.java), PendingIntent.FLAG_UPDATE_CURRENT)
-        val pendingIntent4= PendingIntent.getActivity(this, 5, Intent(this,Questoin4::class.java), PendingIntent.FLAG_UPDATE_CURRENT)
-        val pendingIntent5= PendingIntent.getActivity(this, 5, Intent(this,Question5::class.java), PendingIntent.FLAG_UPDATE_CURRENT)
+        val pendingIntent1= PendingIntent.getActivity(this, 5, Intent(this,Questoin1::class.java), PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE)
+        val pendingIntent2= PendingIntent.getActivity(this, 5, Intent(this,Question2::class.java), PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE)
+        val pendingIntent3= PendingIntent.getActivity(this, 5, Intent(this,Question3::class.java), PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE)
+        val pendingIntent4= PendingIntent.getActivity(this, 5, Intent(this,Questoin4::class.java), PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE)
+        val pendingIntent5= PendingIntent.getActivity(this, 5, Intent(this,Question5::class.java), PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE)
 
         notificationChannel();
 
